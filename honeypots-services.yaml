@@ -1,0 +1,173 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dionaea-rpc-service
+  namespace: honeypots
+spec:
+  selector:
+    app: dionaea-honeypot
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 135
+      targetPort: 135
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: dionaea-smb-service
+  namespace: honeypots
+spec:
+  selector:
+    app: dionaea-honeypot
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 445
+      targetPort: 445
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: dionaea-mssql-service
+  namespace: honeypots
+spec:
+  selector:
+    app: dionaea-honeypot
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 1433
+      targetPort: 1433
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: dionaea-mysql-service
+  namespace: honeypots
+spec:
+  selector:
+    app: dionaea-honeypot
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 3306
+      targetPort: 3306
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: cowrie-ssh-service
+  namespace: honeypots
+spec:
+  type: LoadBalancer
+  selector:
+    app: cowrie-honeypot
+  ports:
+    - protocol: TCP
+      port: 2222
+      targetPort: 2222
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: conpot-scada-service
+  namespace: honeypots
+spec:
+  type: LoadBalancer
+  selector:
+    app: conpot-honeypot
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8800
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: conpot-modbus-service
+  namespace: honeypots
+spec:
+  type: LoadBalancer
+  selector:
+    app: conpot-honeypot
+  ports:
+    - protocol: TCP
+      port: 502
+      targetPort: 5020
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: conpot-snmp-service
+  namespace: honeypots
+spec:
+  type: LoadBalancer
+  selector:
+    app: conpot-honeypot
+  ports:
+    - protocol: UDP
+      port: 161
+      targetPort: 16100
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: conpot-bacnet-service
+  namespace: honeypots
+spec:
+  type: LoadBalancer
+  selector:
+    app: conpot-honeypot
+  ports:
+    - protocol: UDP
+      port: 47808
+      targetPort: 47808
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: conpot-etherip-service
+  namespace: honeypots
+spec:
+  type: LoadBalancer
+  selector:
+    app: conpot-honeypot
+  ports:
+    - protocol: TCP
+      port: 44818
+      targetPort: 44818
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: conpot-plc-service
+  namespace: honeypots
+spec:
+  type: LoadBalancer
+  selector:
+    app: conpot-honeypot
+  ports:
+    - protocol: TCP
+      port: 102
+      targetPort: 10201

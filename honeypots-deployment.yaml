@@ -1,0 +1,79 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cowrie-honeypot
+  namespace: honeypots
+  labels:
+    app: cowrie-honeypot
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: cowrie-honeypot
+  template:
+    metadata:
+      labels:
+        app: cowrie-honeypot
+    spec:
+      containers:
+      - name: cowrie
+        image: cowrie/cowrie
+        ports:
+        - containerPort: 2222
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dionaea-honeypot
+  namespace: honeypots
+  labels:
+    app: dionaea-honeypot
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: dionaea-honeypot
+  template:
+    metadata:
+      labels:
+        app: dionaea-honeypot
+    spec:
+      containers:
+      - name: dionaea
+        image: dtagdevsec/dionaea:2204
+        ports:
+        - containerPort: 135
+        - containerPort: 445
+        - containerPort: 1433
+        - containerPort: 3306
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: conpot-honeypot
+  namespace: honeypots
+  labels:
+    app: conpot-honeypot
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: conpot-honeypot
+  template:
+    metadata:
+      labels:
+        app: conpot-honeypot
+    spec:
+      containers:
+      - name: cowrie
+        image: robertgaines/conpot:latest
+        ports:
+        - containerPort: 8800
+        - containerPort: 10201
+        - containerPort: 5020
+        - containerPort: 16100
+        - containerPort: 47808
+        - containerPort: 44818
+
