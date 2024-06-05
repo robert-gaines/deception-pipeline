@@ -1,0 +1,11 @@
+customRules:
+    falco-exceptions.yaml: |-
+        - rule: Read sensitive file untrusted
+          enabled: true
+          append: true
+          exceptions:
+            - name: wazuh_process_exemptions
+              fields: ["proc.name"]
+              comps: ["in"]
+              values:
+                - [["wazuh-modulesd","wazuh-syscheckd"]]

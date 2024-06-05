@@ -41,7 +41,7 @@ spec:
     spec:
       containers:
       - name: dionaea
-        image: dtagdevsec/dionaea:2204
+        image: dtagdevsec/dionaea:24.04
         ports:
         - containerPort: 135
         - containerPort: 445
