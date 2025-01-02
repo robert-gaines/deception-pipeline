@@ -1,0 +1,21 @@
+Installing Falco on K3S with Helm
+---------------------------------
+1. export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+2. Install Helm (Check the URL)     
+   curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+   chmod 700 get_helm.sh
+   ./get_helm.sh
+3. Add the Falco repository:
+   helm repo add falcosecurity https://falcosecurity.github.io/charts
+   helm repo update
+4. Install Falco/Falco Sidekick (config should be modified to match your logging setup)
+   helm install falco falcosecurity/falco -n falco --create-namespace \
+    --set falcosidekick.enabled=true \
+    --set falcosidekick.config.syslog.host=<ServerIP> \
+    --set falcosidekick.config.syslog.port=<Port> \
+    --set falcosidekick.config.syslog.protocol=<TCP/UDP> \
+    --set falcosidekick.config.syslog.format=json \
+    --set falcosidekick.config.syslog.minimumpriority=informational \
+    --set tty=true
+5. Check deployment:
+   kubectl get pods -n falco

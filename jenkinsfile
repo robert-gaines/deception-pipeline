@@ -1,0 +1,55 @@
+pipeline {
+                agent {
+                    label 'res-phy-prd-rpi-9'  
+                }
+
+    environment {
+        KUBECONFIG = "/etc/rancher/k3s/k3s.yaml"
+        NAMESPACE = "honeypots"
+        WORKSPACE = "/code/k3s-honeypots"
+        GIT_CREDENTIALS_ID = '88a9dcb0-74dc-44cd-91cd-2ff54e337e1e'  
+        GIT_REPOSITORY_URL = 'https://github.com/robert-gaines/k3s-honeypots.git'
+        GIT_BRANCH = 'main'  
+    }
+    stages {
+        stage('Checkout') {
+            steps {
+                git(
+                    credentialsId: "${env.GIT_CREDENTIALS_ID}",
+                    url: "${env.GIT_REPOSITORY_URL}",
+                    branch: "${env.GIT_BRANCH}"
+                )
+            }
+        }
+
+        stage('Apply Manifests') {
+            steps {
+                
+                script {
+            
+                    sh "kubectl apply -f ${env.WORKSPACE}/honeypots-deployment.yaml --namespace=${env.NAMESPACE}"
+
+                    sh "kubectl apply -f ${env.WORKSPACE}/honeypots-services.yaml --namespace=${env.NAMESPACE}"
+                }
+            }
+        }
+
+        stage('Verify Deployment') {
+            steps {
+                script {
+                    // Check the status of the deployed pod
+                    sh "kubectl get pods --namespace=${env.NAMESPACE}"
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            script {
+                // Add any cleanup or notification steps here
+                echo 'Pipeline completed.'
+            }
+        }
+    }
+}
