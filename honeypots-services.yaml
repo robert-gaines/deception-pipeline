@@ -7,6 +7,7 @@ spec:
   selector:
     app: dionaea-honeypot
   type: LoadBalancer
+  loadBalancerIP: 10.128.60.7
   ports:
     - protocol: TCP
       port: 135
@@ -23,6 +24,7 @@ spec:
   selector:
     app: dionaea-honeypot
   type: LoadBalancer
+  loadBalancerIP: 10.128.60.8
   ports:
     - protocol: TCP
       port: 445
@@ -39,6 +41,7 @@ spec:
   selector:
     app: dionaea-honeypot
   type: LoadBalancer
+  loadBalancerIP: 10.128.60.9
   ports:
     - protocol: TCP
       port: 1433
@@ -55,6 +58,7 @@ spec:
   selector:
     app: dionaea-honeypot
   type: LoadBalancer
+  loadBalancerIP: 10.128.60.10
   ports:
     - protocol: TCP
       port: 3306
@@ -69,6 +73,7 @@ metadata:
   namespace: honeypots
 spec:
   type: LoadBalancer
+  loadBalancerIP: 10.128.60.11
   selector:
     app: cowrie-honeypot
   ports:
@@ -85,6 +90,7 @@ metadata:
   namespace: honeypots
 spec:
   type: LoadBalancer
+  loadBalancerIP: 10.128.60.12
   selector:
     app: conpot-honeypot
   ports:
@@ -101,6 +107,7 @@ metadata:
   namespace: honeypots
 spec:
   type: LoadBalancer
+  loadBalancerIP: 10.128.60.13
   selector:
     app: conpot-honeypot
   ports:
@@ -117,6 +124,7 @@ metadata:
   namespace: honeypots
 spec:
   type: LoadBalancer
+  loadBalancerIP: 10.128.60.14
   selector:
     app: conpot-honeypot
   ports:
@@ -133,6 +141,7 @@ metadata:
   namespace: honeypots
 spec:
   type: LoadBalancer
+  loadBalancerIP: 10.128.60.15
   selector:
     app: conpot-honeypot
   ports:
@@ -149,6 +158,7 @@ metadata:
   namespace: honeypots
 spec:
   type: LoadBalancer
+  loadBalancerIP: 10.128.60.16
   selector:
     app: conpot-honeypot
   ports:
@@ -165,6 +175,7 @@ metadata:
   namespace: honeypots
 spec:
   type: LoadBalancer
+  loadBalancerIP: 10.128.60.17
   selector:
     app: conpot-honeypot
   ports:

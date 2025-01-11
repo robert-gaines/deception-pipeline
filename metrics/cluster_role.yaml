@@ -1,0 +1,41 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  # This name should match the one expected by kube-state-metrics
+  # You may already have a ClusterRole like this in your system
+  name: kube-state-metrics
+rules:
+- apiGroups:
+  - "storage.k8s.io"
+  resources:
+  - "volumeattachments"
+  verbs:
+  - "list"
+  - "watch"
+- apiGroups:
+  - "coordination.k8s.io"
+  resources:
+  - "leases"
+  verbs:
+  - "list"
+  - "watch"
+- apiGroups: [""]
+  resources:
+  - "replicationcontrollers"
+  verbs:
+  - "list"
+  - "watch"
+- apiGroups:
+  - "certificates.k8s.io"
+  resources:
+  - "certificatesigningrequests"
+  verbs:
+  - "list"
+  - "watch"
+- apiGroups:
+  - "networking.k8s.io"
+  resources:
+  - "ingresses"
+  verbs:
+  - "list"
+  - "watch"
