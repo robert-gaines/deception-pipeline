@@ -1,5 +1,6 @@
 # k3s-honeypots
 
-k3s Manifests for Honeypots
+This project collects, enriches and presents threat intelligence data based on honeypot intrusions. 
 
-![deception-pipeline](https://github.com/user-attachments/assets/cd2a5daf-1088-4396-84ab-c214517fca4a)
+![deception-pipeline - v2](https://github.com/user-attachments/assets/a295a4e5-e6d5-4908-ba00-1bef6470487e)
+
