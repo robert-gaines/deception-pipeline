@@ -6,10 +6,10 @@ This project collects, enriches and presents threat intelligence data based on h
 
 Current Threat Feeds
 
-[Threat Feed Text File](https://camas-sec-threatfeed.s3.us-west-2.amazonaws.com/feed.txt) \n
-[Intruder FQDNs](https://camas-sec-threatfeed.s3.us-west-2.amazonaws.com/fqdn.txt) \n
-[Threat Feed CSV File](https://camas-sec-threatfeed.s3.us-west-2.amazonaws.com/feed.csv) \n
-[Comprehensive Threat Map](https://camas-sec-threatfeed.s3.us-west-2.amazonaws.com/threatmap.html) \n
-[Malware Hashes](https://camas-sec-threatfeed.s3.us-west-2.amazonaws.com/hashes.txt) \n
-[Malware Data CSV](https://camas-sec-threatfeed.s3.us-west-2.amazonaws.com/hashes.csv) \n
-[Malware Infrastructure Map](https://camas-sec-threatfeed.s3.us-west-2.amazonaws.com/malware.html) \n
+[Threat Feed Text File](https://camas-sec-threatfeed.s3.us-west-2.amazonaws.com/feed.txt) \
+[Intruder FQDNs](https://camas-sec-threatfeed.s3.us-west-2.amazonaws.com/fqdn.txt) \
+[Threat Feed CSV File](https://camas-sec-threatfeed.s3.us-west-2.amazonaws.com/feed.csv) \
+[Comprehensive Threat Map](https://camas-sec-threatfeed.s3.us-west-2.amazonaws.com/threatmap.html) \
+[Malware Hashes](https://camas-sec-threatfeed.s3.us-west-2.amazonaws.com/hashes.txt) \
+[Malware Data CSV](https://camas-sec-threatfeed.s3.us-west-2.amazonaws.com/hashes.csv) \
+[Malware Infrastructure Map](https://camas-sec-threatfeed.s3.us-west-2.amazonaws.com/malware.html) \
