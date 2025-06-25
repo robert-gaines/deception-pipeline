@@ -6,7 +6,7 @@ This project collects, enriches and presents threat intelligence data based on h
 
 Current Threat Feeds
 
-[Threat Feed Text File](https://camas-sec-threatfeed.s3.us-west-2.amazonaws.com/feed.txt) \
+[Threat Feed IP Text File](https://camas-sec-threatfeed.s3.us-west-2.amazonaws.com/feed.txt) \
 [Intruder FQDNs](https://camas-sec-threatfeed.s3.us-west-2.amazonaws.com/fqdn.txt) \
 [Threat Feed CSV File](https://camas-sec-threatfeed.s3.us-west-2.amazonaws.com/feed.csv) \
 [Comprehensive Threat Map](https://camas-sec-threatfeed.s3.us-west-2.amazonaws.com/threatmap.html) \
