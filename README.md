@@ -12,4 +12,4 @@ Current Threat Feeds
 [Comprehensive Threat Map](https://camas-sec-threatfeed.s3.us-west-2.amazonaws.com/threatmap.html) \
 [Malware Hashes](https://camas-sec-threatfeed.s3.us-west-2.amazonaws.com/hashes.txt) \
 [Malware Data CSV](https://camas-sec-threatfeed.s3.us-west-2.amazonaws.com/hashes.csv) \
-[Malware Infrastructure Map](https://camas-sec-threatfeed.s3.us-west-2.amazonaws.com/malware.html) \
+[Malware Infrastructure Map](https://camas-sec-threatfeed.s3.us-west-2.amazonaws.com/malware.html)
